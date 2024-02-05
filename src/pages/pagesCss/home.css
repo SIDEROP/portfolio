@@ -1,0 +1,204 @@
+#main .home{
+    background-color: rgba(0, 0, 0, 0.693);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* hardwork */
+.one1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    cursor: none;
+    /* clip-path: ellipse(200px 200px at 70%); */
+    z-index: 4;
+}
+
+.two2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    cursor: none;
+    z-index: 2;
+}
+
+.two2.active{
+    clip-path: ellipse(100% 100%);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+
+/* hardwork */
+
+
+
+/* content data */
+
+.home .content{
+    background-color: rgba(0, 128, 0, 0.261);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    user-select: none;                    
+}
+
+.home .content .prof_box .next_{
+    display: flex;
+    position: relative;
+}
+.home .content .prof_box .akash{
+    color: orange;
+    text-shadow: 0 0 5px rgba(255, 166, 0, 0.405),0 0 10px rgba(255, 166, 0, 0.539);
+}
+.home .content .prof_box .next_ #im{
+    margin-right: 10px;
+    color: white;
+}
+
+.home .content .prof_box span{
+    font-size: 30px;
+    transform: translateY(2px);
+    color: aqua;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.748),0 0 10px rgba(0, 255, 255, 0.748);
+    
+}
+.home .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+}
+
+.home .content .prof_box .status{
+    font-family: "Poppins";
+    padding-right: 8px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: namel 4s steps(25) infinite;
+    width: 0%;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    cursor: pointer;
+    color: aqua;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.748),0 0 10px rgba(0, 255, 255, 0.748);
+}
+
+@keyframes namel {
+  10%{width: 0px;}
+  70%,90%{width: 100%;}
+}
+
+
+.home .content .bioData{
+    width: 100%;
+    position: relative;
+}
+
+.home .content .bioData p{
+    width:  clamp(200px,100%,600px);
+    cursor: pointer;
+    word-break: break-all;
+    color: white;
+    text-transform: capitalize;
+}
+.home .content .bioData p::first-line{
+    color: aqua;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.748),0 0 10px rgba(0, 255, 255, 0.748);
+}
+
+/* .bio_down */
+.home .content .bio_down{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+}
+
+/* social-icons */
+.home .content .bio_down .social-icons{
+    width: 100%;
+    position: relative;
+    width: clamp(100px,100%,600px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+/* .down_box */
+.down_box{
+    width: clamp(100px,100%,600px);
+    display: flex;
+    justify-content: center;
+}
+
+#press{
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    font-size: 10px;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.534);
+    padding: 4px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.513);
+    z-index: -1;
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 405px) {
+    .home .content{
+        padding-left: 5%;
+    }
+
+    .home .content .prof_box{
+        font-size: 15px;
+    }
+
+    .home .content .prof_box span{
+        font-size: 25px;
+        transform: translateY(2.4px);   
+    }
+
+    .home .content .bioData p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 354px) {
+    .home .content .prof_box{
+        font-size: 11px;
+    }
+    
+    .home .content .prof_box span{
+        font-size: 18px;
+        transform: translateY(2px);   
+    }
+    
+    .home .content .bioData p{
+        font-size: 12px;
+    }
+    .home .content{
+        gap: 8px;
+    }
+}

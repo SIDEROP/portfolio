@@ -1,0 +1,159 @@
+/* header */
+header{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5vw 3px 2vw;
+    z-index: 99;
+    user-select: none;
+}
+
+
+
+/* .logo */
+header .logo{
+    margin-top: 10px;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.15 );
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px 3px 10px 3px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+header .logo img{
+    width: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+}
+header .logo .logo_name{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation: logo_name 4s cubic-bezier(0.10, 1.3, 0.70, 1)  infinite;
+    z-index: -1;
+    text-align: center;
+}
+/* .logo keyframes */
+@keyframes logo_name {
+    0%{transform: translateX(0px);}
+    30%{transform: translateX(70px);}
+}
+
+/* nav css */
+nav{
+    width: 67%;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+header .navLinks {
+    width: clamp(120px,85%,520px);
+    display: inline-flex;
+    background-color:transparent;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    overflow: auto;
+    backdrop-filter: blur(2px) saturate(200%);
+    -webkit-backdrop-filter: blur(2px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    position: relative;
+}
+
+header .navLinks i{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+header .navLinks i#left.leftbb{
+    color: aqua;
+    text-shadow: 0 0 15px aqua, 0 0 30px aqua;
+}
+header .navLinks i#right_.right_{
+    color: aqua;
+    text-shadow: 0 0 15px aqua, 0 0 30px aqua;
+}
+
+
+
+
+header .navLinks .box_nav{
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    background-color: transparent;
+    gap: 20px;
+    padding: 1vh;
+    transition: all 1s ease;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+}
+
+header .navLinks .box_nav::-webkit-scrollbar{
+    display: none;
+}
+
+header .navLinks .box_nav a{
+    color: white;
+    position: relative;
+    width: fit-content;
+}
+header .navLinks .box_nav a::before{
+    content: '';
+    width: 40%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: aqua;
+    transition: width .3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.649), 0 0 25px rgba(0, 255, 255, 0.626);
+}
+
+header .navLinks .box_nav a:hover::before{
+    width: 100%;
+}
+
+
+header .navLinks .box_nav a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.649), 0 0 25px rgba(0, 255, 255, 0.626);
+    transition: width .3s ease;
+}
+
+header .navLinks .box_nav a:hover::after{
+    width: 100%;
+}

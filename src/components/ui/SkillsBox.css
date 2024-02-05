@@ -1,0 +1,48 @@
+.skills_box{
+    position: relative;
+    width: clamp(100px,77%,330px);
+}
+.skills_box .skillsName{
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.skills_box .inputRange{
+    position: relative;
+    display: inline-block;
+    width: clamp(100px,100%,330px);
+    height: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.inputRange .colorRange{
+    position: relative;
+    background-image: linear-gradient(
+        285deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(49deg 28% 45%) 10%,
+        hsl(53deg 61% 52%) 19%,
+        hsl(55deg 100% 50%) 28%,
+        hsl(68deg 100% 47%) 37%,
+        hsl(83deg 100% 49%) 45%,
+        hsl(110deg 100% 50%) 53%,
+        hsl(153deg 88% 54%) 61%,
+        hsl(175deg 80% 49%) 69%,
+        hsl(191deg 100% 50%) 76%,
+        hsl(185deg 100% 48%) 84%,
+        hsl(179deg 100% 47%) 92%,
+        hsl(173deg 100% 50%) 100%
+      );
+    width: 100%;
+    height: 5px;
+}
+.inputRange:hover{
+    border: 1px solid white;
+}

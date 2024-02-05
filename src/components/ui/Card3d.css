@@ -1,0 +1,160 @@
+.myCard {
+    background-color: transparent;
+    /* width: 190px;
+    height: 254px; */
+    width: clamp(240px,30%,340px);
+    height: 30%;
+    perspective: 1000px;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid black;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+    overflow: hidden;
+  }
+  
+
+  
+  .backSide {
+    transform: rotateY(180deg);
+    color: black;
+    padding: 6px;
+    font-size: 13px;
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
+
+
+
+  .frontSide img{
+    object-fit: cover;
+    width: 100%;
+    filter: blur(2px) saturate(1);
+  }
+  .frontSide .title{
+    position: absolute;
+    z-index: 2;
+    color: aqua;
+    background-color: rgba(0, 0, 0, 0.706);
+    backdrop-filter: blur(220);
+    padding: 4px;
+    border-radius: 22px;
+    font-size: 100%;
+  }
+
+  .backSide .backHover{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: height 1s ease;
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0),aqua);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .backSide:hover .backHover{
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .myCard{
+        min-width: 40%;
+        height:160px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .myCard{
+        min-width: 60%;
+        height:160px;
+    }
+  }
+
+
+  @media only screen and (max-width: 780px) {
+    .myCard{
+      height:130px;
+  }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .myCard{
+        min-width: 100%;
+        height: 120px;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .myCard{
+        min-width: 100%;
+        height: clamp(60px,17%,130px);
+        font-size: 8px;
+    }
+  }

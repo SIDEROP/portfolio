@@ -1,0 +1,336 @@
+#main .about{
+    background-color:transparent;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+
+.about .about_up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    /* top: -50%; */
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 150px;
+    overflow: hidden;
+    transition: top 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+
+    backdrop-filter: blur(7px) saturate(200%);
+    -webkit-backdrop-filter: blur(7px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.37);
+    
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    cursor: none;
+}
+
+.about .about_dwon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    
+    /* bottom: -50%; */
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 150px;
+    overflow: hidden;
+    transition: bottom 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    backdrop-filter: blur(7px) saturate(200%);
+    -webkit-backdrop-filter: blur(7px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.37);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    cursor: none;
+}
+
+.about .about_up span{
+    transform: translateY(114px);
+}
+
+.about .about_dwon span{
+    transform: translateY(-114px);
+}
+
+@media only screen and (max-width: 600px) {
+    .about .about_up{
+        font-size: 85px;
+    }
+    .about .about_dwon{
+        font-size: 85px;
+    }
+    .about .about_up span{
+        transform: translateY(64px);
+    }
+    .about .about_dwon span{
+        transform: translateY(-64px);
+    }
+}
+
+
+/* about_content */
+.about .about_content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about_content .about_card{
+    position: relative;
+    background-color: black;
+    height: clamp(300px,85%,600px);
+    width: clamp(300px,85%,1200px);
+    border-radius: 9% 91% 4% 96% / 91% 8% 92% 9% ;
+
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  29px 29px 30px #4f4e4e,
+             -29px -29px 30px #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+
+}
+
+/* card_profileOne */
+
+.card_profileOne{
+    background-color: black;
+    position: relative;
+    width: clamp(600px,50%,400px);
+    height: 100%;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card_profileOne .MY_card{
+    position: relative;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    outline: 5px solid aqua;
+    overflow: hidden;
+}
+.card_profileOne .MY_card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.card_profileOne .my_data_{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_profileOne h3{
+    color: white;
+}
+
+
+
+
+
+
+/* card_profileTwo */
+.card_profileTwo{
+    position: relative;
+    background-color: transparent;
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* about_me */
+.card_profileTwo .about_me{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card_profileTwo .status_about >div{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+}
+.card_profileTwo .status_about >div span{
+    opacity: .8;
+    white-space: nowrap;
+}
+.card_profileTwo .status_about{
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card_profileTwo .status_about h4{
+    font-size: 25px;
+}
+
+
+
+
+/* about_btn */
+.card_profileTwo .about_btn{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* slideCardBtn */
+.card_profileTwo .slideCardBtn{
+    position: absolute;
+    right: 0;
+    font-size: 70px;
+    cursor: pointer;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    color: white;
+    background-color: aqua;
+}
+
+
+.card_profileTwo .slideCardBtn span{
+    animation: slideCardBtn 2s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes slideCardBtn {
+    0%{transform: scale(1);}
+    100%{
+        transform: scale(.5);
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .card_profileTwo .slideCardBtn{
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 701px) {
+    .about .about_content .about_card{
+        flex-direction: column;
+        height: clamp(300px,85%,500px);
+    }
+    .card_profileOne{
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        gap: 10%;
+    }
+    .card_profileOne .MY_card{
+        width: 100px;
+        height: 100px;
+    }
+    .my_data_{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card_profileOne h3{
+        font-size: 17px;
+    }
+    .card_profileTwo .status_about h4{
+        font-size: 15px;
+    }
+    .about_card_slide .skills_title{
+       margin-top: -16px;
+    }
+    .about_card_slide .skills_title h3{
+        font-size: 21px;
+    }
+    .skills_box h4{
+        font-size: 14px;
+    }
+    .card_profileTwo .slideCardBtn{
+        font-size: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 460px) {
+    .card_profileOne{
+        gap: 3%;
+        width: 100%;
+        border-radius: 0px;
+
+    }
+    .card_profileOne h3{
+        font-size: 12px;
+    }
+    .card_profileTwo .slideCardBtn{
+        font-size: 30px;
+    }
+    .about .about_content .about_card{
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .card_profileTwo {
+        width: 100%;
+        border-radius: none;
+    }
+
+    .about .about_content .about_card{
+        position: relative;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        border-radius: none;
+    
+        background: transparent;
+        box-shadow: none;
+        
+    }
+
+    
+}

@@ -1,0 +1,32 @@
+.input_contect {
+    background-color: #383838;
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: #383838;
+    word-wrap: break-word;
+    height: 30px;
+    font-size: 17px;
+    text-align: start;
+    transition: all 1s;
+    max-width: 190px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    outline: 7px solid aqua;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.572),0 0 50px rgba(0, 255, 255, 0.662);
+   }
+   
+   .input_contect:hover {
+    border-top-width: 0.2rem;
+    background-color: #f1e8e8;
+   }
+   
+   
+   .input_contect:focus,
+   .input_contect:valid {
+       border-top-width: 0%;
+       background-color: #f1e8e8;
+       border-top-width: .2rem;
+   }

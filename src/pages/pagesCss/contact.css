@@ -1,0 +1,260 @@
+#main .contact{
+    position: relative;
+    background-color:transparent;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+.contact .formBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+.contact .formBox .sideOne{
+    position: relative;
+    background-color: #323744;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+.formBox .sideOne .formUser{
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sideOne .contectMe {
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.sideOne .contectMe h1{
+    color: white;
+}
+.sideOne .contectMe h1 span{
+    color: aqua;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.64),0 0 30px rgba(0, 255, 255, 0.64);
+}
+
+
+.formBox .sideOne .form_grp{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: transparent;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+.formBox .sideOne .form_grp label{
+    color: white;
+    font-weight: 700;
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    z-index: 22;
+}
+
+
+.form_grp textarea{
+    position: relative;
+    max-width: 400px;
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 300px;
+    background-color: #383838;
+    border: 1ex solid none;
+    border-top-width: 100px;
+    margin: 0;
+    padding: 0;
+    color: #383838;
+    word-wrap: break-word;
+    height: 0px;
+    font-size: 17px;
+    text-align: start;
+    transition: background-color 1s;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    outline: 7px solid aqua;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.572),0 0 50px rgba(0, 255, 255, 0.662);
+}
+
+.form_grp textarea:hover {
+    border-top-width: .2rem;
+    background-color: #f1e8e8;
+}
+   
+.form_grp textarea:focus,
+.form_grp textarea:valid {
+    border-top-width: 0%;
+    background-color: #f1e8e8;
+    border-top-width: .2rem;
+}
+
+
+.sideOne .form_grp button{
+    position: relative;
+    width: 140px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: aqua;
+    border: 1px aqua ;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform .2s;
+}
+
+.sideOne .form_grp button:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.492),0 0 25px rgba(0, 255, 255, 0.581),0 0 30px rgba(0, 255, 255, 0.347);
+}
+
+
+
+/* sideTwo */
+.contact .formBox .sideTwo{
+    position: relative;
+    background-color: black;
+    height: 100%;
+    width: clamp(400px,30%,30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    gap: 5%;
+}
+.sideTwo .map{
+    position: relative;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+    padding: 4px;
+}
+.sideTwo .map h3{
+    font-size: 22px;
+}
+
+.sideTwo .map .mapBox{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.sideTwo .addressBox{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 666px) {
+    .formBox .sideOne .formUser{
+        height: 100%;
+    }
+    .contact .formBox{
+        flex-direction: column;
+    }
+    .contact .formBox .sideOne{
+        width: 100%;
+        min-width: 60%;
+    }
+    .formBox .sideOne .form_grp{
+        margin-bottom: 3px;
+    }
+
+
+    /* sideTwo */
+    .contact .formBox .sideTwo{
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        font-size: 12px;
+        gap: 1%;
+        overflow: hidden;
+    }
+    .sideTwo .map h3{
+        font-size: 17px;
+    }
+    .sideTwo .addressBox{
+        width: 60%;
+    }
+    
+    /* map */
+    .sideTwo .map{
+        height: clamp(100px,100%,300px);
+    }
+
+    .form_grp textarea{
+        position: relative;
+        max-width: 400px;
+        min-width: 260px;
+        max-height: 60px;
+        min-height: 60px;
+        font-size: 12px;
+    }
+
+
+    .sideOne .form_grp button{
+        width: 120px;
+        height: 28px;
+    }
+
+    .sideOne .form_grp button:hover{
+        transform: scale(.8);
+    }
+    
+}
+
+@media only screen and (max-width: 474px) {
+    
+    .sideTwo .map {
+        gap: 2px;
+    }
+    .sideTwo .map h3{
+        font-size: 13px;
+        margin-top: 3px;
+    }
+    .sideTwo .addressBox{
+        font-size: 9px;
+    }
+}

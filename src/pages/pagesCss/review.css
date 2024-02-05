@@ -1,0 +1,331 @@
+#main .review{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+}
+
+.review .reviewbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom,#A3D8DC,#EADFD8);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.review .reviewbox .reviewCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.reviewCont .img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+.reviewCont .img .reviewItem{
+    display: none;
+}
+
+.reviewCont .img:nth-child(1){
+    min-width: 25px;
+    max-width: 3%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    animation: message .9s ease-in-out;
+}
+.reviewCont .img:nth-child(1) h3{
+    transform: rotate(-90deg);
+}
+.reviewCont .img:nth-child(2){
+    min-width: 35px;
+    max-width: 3%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    animation: message .9s ease-in-out;
+}
+.reviewCont .img:nth-child(2) h3{
+    transform: rotate(-90deg);
+    font-size: 28px;
+}
+
+.reviewCont .img:nth-child(3){
+    min-width: 230px;
+    max-width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.reviewCont .img:nth-child(3) > h3{
+    display: none;
+}
+.reviewCont .img:nth-child(3) .reviewItem{
+    display: flex;
+}
+
+.reviewCont .img:nth-child(4){
+    min-width: 35px;
+    max-width: 3%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    animation: message .9s ease-in-out;
+}
+.reviewCont .img:nth-child(4) h3{
+    transform: rotate(90deg);
+    font-size: 28px;
+}
+
+.reviewCont .img:nth-child(5){
+    min-width: 25px;
+    max-width: 3%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    animation: message .9s ease-in-out;
+}
+.reviewCont .img:nth-child(5) h3{
+    transform: rotate(90deg);
+}
+
+.reviewCont .img:nth-child(n + 6){
+    display: none;
+}
+
+/* 3rd child */
+.reviewCont .img:nth-child(3)::before{
+    content: "Over 1000+ people";
+    font-size: 200%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes review {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* reviewItem */
+
+.img:nth-child(3) .reviewItem{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.img:nth-child(3) .reviewItem .message{
+    position: relative;
+    text-align: center;
+    width: clamp(100px,50%,600px);
+    animation: message 2s ease-in-out;
+}
+@keyframes message {
+    from{
+        opacity: 0;
+    }
+}
+/* profileReview */
+.reviewItem .profileReview{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* userPic */
+.reviewItem .profileReview .userPic{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: userPic .9s ease-in-out;
+}
+@keyframes userPic {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+
+
+/* userName */
+.reviewItem .profileReview .userName{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    width: clamp(150px,40%,300px);
+    animation: userName .9s ease-in-out;
+}
+@keyframes userName {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
+/* btn contr */
+.reviewbox .contrlRevi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    padding: 5px 0;
+    font-size: 40px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.reviewbox .contrlRevi i{
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1412px) {
+
+    .img:nth-child(3) .reviewItem .message{
+      width: clamp(100px,70%,600px);
+    }
+
+}
+@media only screen and (max-width: 1235px) {
+    .reviewCont .img:nth-child(3)::before{
+        height: 9%;
+    }
+
+    .img:nth-child(3) .reviewItem .message{
+      width: clamp(100px,90%,600px);
+      font-size: 13px;
+    }
+    .reviewItem .profileReview .userName{
+        font-size: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .reviewCont .img:nth-child(3)::before{
+        font-size: 25px;
+        height: 9%;
+    }
+
+    .img:nth-child(3) .reviewItem{
+        height: 50%;
+    }
+    
+    .reviewItem .profileReview .userName{
+        font-size: 14px;
+    }
+    
+    .reviewItem .profileReview .userPic{
+        height: 130px;
+        width: 130px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .reviewCont .img:nth-child(3)::before{
+        font-size: 15px;
+    }
+    .img:nth-child(3) .reviewItem .message{
+        width: clamp(100px,95%,600px);
+        font-size: 10px;
+    }
+    .reviewItem .profileReview .userName{
+        width: clamp(100px,40%,300px);
+        font-size: 12px;
+    }
+    
+    /* adv */
+    
+}
+@media only screen and (max-width: 460px) {
+    .review .reviewbox .reviewCont{
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .review .reviewbox .reviewCont{
+        gap: 6px;
+    }
+    .reviewCont .img:nth-child(1),
+    .reviewCont .img:nth-child(5){
+        font-size: 10px;
+    }
+    
+    .reviewCont .img:nth-child(2) h3,
+    .reviewCont .img:nth-child(4) h3{
+        font-size: 20px;
+    }
+    .reviewCont .img:nth-child(3){
+        min-width: 185px;
+        max-width: 50%;
+    }
+
+    .reviewItem .profileReview .userPic{
+        height: 70px;
+        width: 70px;
+    }
+
+    .reviewItem .profileReview .userName{
+        font-size: 9px;
+    }
+
+}
+
+
+/* FANCY-BORDER-RADIUS IMG */
+
+.reviewCont .img:nth-child(3) .userPic{
+    border-radius: 30% 70% 65% 35% / 43% 48% 52% 57%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
