@@ -86,7 +86,7 @@
 .project .projectSlider.active{
     left: 7%;
     pointer-events: initial;
-    background-color: #fff;
+    background:linear-gradient(to bottom,#A3D8DC,#EADFD8);
     border-radius: 5px;
 }
 

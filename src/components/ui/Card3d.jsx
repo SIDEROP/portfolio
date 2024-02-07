@@ -12,7 +12,7 @@ const Card3d = ({data}) => {
             <div className="backSide">
                 <p className="aboutSide">{data.about}</p>
                 <div className='backHover'>
-                  <LinkPro/>
+                  <LinkPro link={data.link}/>
                 </div>
             </div>
         </div>

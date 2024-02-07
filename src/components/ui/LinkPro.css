@@ -1,7 +1,6 @@
-.btn{
-    position: relative;
+.btn_{
+    position: absolute;
     margin: 0;
-    
     outline: none;
     text-decoration: none;
     display: flex;
@@ -22,9 +21,10 @@
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     width: clamp(40px,50%,140px);
     height: 30px;
+    bottom: 40;
   }
 
-  .btn a{
+  .btn_ a{
     color: white;
     display: inline-block;
     width: 100%;
@@ -32,7 +32,7 @@
     cursor: pointer;
   }
   
-  .btn:hover {
+  .btn_:hover {
     animation: sh0 0.5s ease-in-out both;
   }
   
@@ -58,13 +58,13 @@
     }
   }
   
-  .btn:hover span {
+  .btn_:hover span {
     animation: storm 0.7s ease-in-out both;
     animation-delay: 0.06s;
   }
   
-  .btn::before,
-  .btn::after {
+  .btn_::before,
+  .btn_::after {
     content: '';
     position: absolute;
     right: 0;
@@ -79,17 +79,17 @@
     transform: translate(100%, -25%) translate3d(0, 0, 0);
   }
   
-  .btn:hover::before,
-  .btn:hover::after {
+  .btn_:hover::before,
+  .btn_:hover::after {
     opacity: 0.15;
     transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
   }
   
-  .btn:hover::before {
+  .btn_:hover::before {
     transform: translate3d(50%, 0, 0) scale(0.9);
   }
   
-  .btn:hover::after {
+  .btn_:hover::after {
     transform: translate(50%, 0) scale(1.1);
   }
   

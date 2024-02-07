@@ -41,11 +41,11 @@
 .reviewCont .img:nth-child(1){
     min-width: 25px;
     max-width: 3%;
-    height: 30%;
+    height: 25%;
     display: flex;
     flex-direction: column;
     background-color: white;
-    animation: message .9s ease-in-out;
+    animation: message2 2s ease-in-out;
 }
 .reviewCont .img:nth-child(1) h3{
     transform: rotate(-90deg);
@@ -80,6 +80,16 @@
     overflow: hidden;
 }
 
+.reviewCont .img:nth-child(3) img{
+    position: relative;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.reviewCont .img:nth-child(3) .userName h3::first-letter{
+    text-transform: uppercase;
+}
+
 .reviewCont .img:nth-child(3) > h3{
     display: none;
 }
@@ -108,7 +118,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    animation: message .9s ease-in-out;
+    animation: message2 2s ease-in-out;
 }
 .reviewCont .img:nth-child(5) h3{
     transform: rotate(90deg);
@@ -156,6 +166,13 @@
 @keyframes message {
     from{
         opacity: 0;
+        transform: rotateX(-60deg);
+    }
+}
+@keyframes message2 {
+    from{
+        opacity: 0;
+        transform: rotateX(-60deg);
     }
 }
 /* profileReview */
@@ -289,6 +306,22 @@
     .review .reviewbox .reviewCont{
         gap: 10px;
     }
+    .reviewCont .img:nth-child(1){
+        max-height: 25%;
+    }
+    .reviewCont .img:nth-child(2){
+        max-height: 30%;
+    }
+        
+    .reviewCont .img:nth-child(3){
+        max-height: 40%;
+    }
+    .reviewCont .img:nth-child(4){
+        max-height: 30%;
+    }
+    .reviewCont .img:nth-child(5){
+        max-height: 25%;
+    }
 }
 @media only screen and (max-width: 400px) {
     .review .reviewbox .reviewCont{
@@ -328,4 +361,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    height: 50px;
+    width: 50px;
 }

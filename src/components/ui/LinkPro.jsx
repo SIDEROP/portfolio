@@ -1,11 +1,12 @@
 import React from "react";
 import "./LinkPro.css";
 
-const LinkPro = () => {
+const LinkPro = ({link}) => {
+  console.log(link)
   return (
-      <button className="btn">
-        <a href="#">
-          <span>GO{">>"}</span>
+      <button className="btn_">
+        <a href={link}>
+          <span >GO{">>"}</span>
         </a>
       </button>
   );

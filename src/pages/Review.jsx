@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react'
 import "./pagesCss/review.css"
+import img1 from "../../public/dumy/1.jpg";
+import img2 from "../../public/dumy/2.png";
+import img3 from "../../public/dumy/3.jpg";
+import img4 from "../../public/dumy/4.jpg";
+import img5 from "../../public/dumy/5.jpg";
 
 const Review = () => {
   useEffect(()=>{
@@ -18,31 +23,31 @@ const Review = () => {
       <div className="reviewbox">
         <div className="reviewCont" id='reviewCont'>
           <span className="img">
-            <h3>vikashpatel1</h3>
+            <h3>ankitakori</h3>
             <div className="reviewItem">
               <div className='message'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit reprehenderit quo nesciunt vel commodi nemo dolore?
               </div>
               <div className="profileReview">
                 <div className="userPic">
-                    pic
+                    <img src={img1} alt="" />
                 </div>
                 <div className="userName">
                   <span>@</span>
-                  <h3>amitPatel</h3>
+                  <h3>ankitakori</h3>
                 </div>
               </div>
             </div>
           </span>
           <span className="img">
-            <h3>rohitPatel2</h3>
+            <h3>diyatiwari</h3>
             <div className="reviewItem">
               <div className='message'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit reprehenderit quo nesciunt vel commodi nemo dolore?
               </div>
               <div className="profileReview">
                 <div className="userPic">
-                    pic
+                  <img src={img2} alt="" />
                 </div>
                 <div className="userName">
                   <span>@</span>
@@ -52,35 +57,35 @@ const Review = () => {
             </div>
           </span>
           <span className="img">
-            <h3>akashPatel3</h3>
+            <h3>sonamsingh</h3>
             <div className="reviewItem">
               <div className='message'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit reprehenderit quo nesciunt vel commodi nemo dolore?
               </div>
               <div className="profileReview">
                 <div className="userPic">
-                    pic
+                  <img src={img3} alt="" />
                 </div>
                 <div className="userName">
                   <span>@</span>
-                  <h3>akashPatel</h3>
+                  <h3>sonamsingh</h3>
                 </div>
               </div>
             </div>
           </span>
           <span className="img">
-            <h3>amitPatel4</h3>
+            <h3>arohipatel</h3>
             <div className="reviewItem">
               <div className='message'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit reprehenderit quo nesciunt vel commodi nemo dolore?
               </div>
               <div className="profileReview">
                 <div className="userPic">
-                    pic
+                  <img src={img4} alt="" />
                 </div>
                 <div className="userName">
                   <span>@</span>
-                  <h3>rohitPatel</h3>
+                  <h3>arohipatel</h3>
                 </div>
               </div>
             </div>
@@ -93,7 +98,7 @@ const Review = () => {
               </div>
               <div className="profileReview">
                 <div className="userPic">
-                    pic
+                  <img src={img5} alt="" />
                 </div>
                 <div className="userName">
                   <span>@</span>
