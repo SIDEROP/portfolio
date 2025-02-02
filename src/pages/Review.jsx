@@ -130,13 +130,22 @@ const Review = () => {
           className="add-review-btn mb-[10px]"
           onClick={() => setShowForm(true)}
           style={{
-            padding: '10px 20px',
-            backgroundColor: '#007bff',
+            padding: '8px 16px',
+            backgroundColor: '#007bff', 
             color: 'white',
             border: 'none',
             borderRadius: '5px',
             cursor: 'pointer',
-            marginTop: '20px'
+            marginTop: '20px',
+            fontSize: '14px',
+            '@media (min-width: 768px)': {
+              padding: '12px 24px',
+              fontSize: '16px'
+            },
+            '@media (min-width: 1024px)': {
+              padding: '14px 28px',
+              fontSize: '18px'
+            }
           }}
         >
           Add Review
