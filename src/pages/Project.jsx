@@ -1,104 +1,53 @@
 import React, { useEffect, useState } from 'react'
-import '../pages/pagesCss/project.css'
-import {Card3d} from "../components/imports/imports";
-import porfolio from "../../public/imgs/porfolio.png" 
-import extention from "../../public/imgs/extention.png" 
-import tweet from "../../public/imgs/tweet.png" 
+import ProjectAdv from "./ProjectAdv"
 
 const Project = () => {
+  
+  const [isProjectOpen, setIsProjectOpen] = useState(false)
 
-  let [projecData_,projectDataSet] = useState([
-    {
-      porName:"MY PORTFOLIO",
-      img:porfolio,
-      about:"3d Animation portfolio no using any framework and library only core java css and react",
-      link:"https://siderop.github.io/protfolio"
-    },
-    {
-      porName:"Chorome Extention",
-      img:extention,
-      about:"I made this project for myself because I don't like the default extension of cookie browser.",
-      link:"https://siderop.github.io/siderop"
-    },
-    {
-      porName:"Twitter Clone",
-      img:tweet,
-      about:"Hello, this is my full stack project which works like a full backend or it can work like a twitter in a few days or after that we will bring mor..🙏❤️❤️",
-      link:"https://siderop.github.io/twitter"
-    },
-    {
-      porName:"Flipkart Clone",
-      img:porfolio,
-      about:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, a?",
-      link:"https://siderop.github.io/flipkart"
-    },
-    {
-      porName:"Spotify Clone",
-      img:porfolio,
-      about:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, a?",
-      link:"https://siderop.github.io/spotify"
-    }
-  ])
-
-  let scrollPro = ()=>{
-    document.getElementById("projectSlider").classList.toggle("active")
-    document.querySelector(".btnProj").classList.toggle("active")
-    document.querySelector(".projecbtn").classList.toggle("active")
+  const toggleProject = () => {
+    setIsProjectOpen(!isProjectOpen)
   }
 
-  useEffect(()=>{
-    // rojectSlider()
-    
-    document.getElementById("projectSlider").addEventListener("wheel",(e)=>{
-      e.preventDefault()
-      console.log(e.deltaY)
-      document.getElementById("projectSlider").scrollLeft += e.deltaY
-    })
 
-    document.querySelectorAll(".proSame").forEach(val=>{
-      val.addEventListener("mousemove",e=>{
-        if (e.x>0) {
-          document.querySelector(".svg1").style.left = `${e.x / 5}px`
-          document.querySelector(".svg2").style.right = `-${e.x / 5}px`
-        }
-        if (e.y> 0) {
-          document.querySelector(".svg1").style.top = `${e.y / 5}px`
-          document.querySelector(".svg2").style.bottom = `-${e.y / 5}px`
-        }
-      })
-    })
-
-  },[])
   return (
-    <div className='project' id='project' >
-      <div className='projecbtn'>
-        <h1 className='h1' >
-            <span>P</span>
-            <span>R</span>
-            <span>J</span>
-            <span>E</span>
-            <span>C</span>
-            <span>T</span>
-            <span>{">"}</span>
-            <span>{">"}</span>
-          </h1>
+    <div id='project' className=' project w-full h-screen relative overflow-hidden flex justify-center items-center bg-transparent'>
+      <div className={`relative w-full h-full bg-transparent flex justify-center items-center cursor-pointer bg-gradient-to-b from-[#EADFD8] to-[#A3D8DC] ${isProjectOpen ? 'bg-[#323744]' : ''}`}>
+        
+        <h1 className='hidden sm:block w-[clamp(100px,70%,70%)]  text-[40px] sm:text-[7vw] absolute left-0 pl-[10%] select-none text-transparent font-extrabold tracking-wider animate-bounce' style={{textShadow: '3px 3px 0 #ff69b4, 6px 6px 0 #4b0082, 9px 9px 0 #00bfff '}}>
+            <span className='hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block'>P</span>
+            <span className='hover:text-purple-400 transition-all duration-300 transform hover:scale-110 inline-block'>R</span>
+            <span className='hover:text-blue-400 transition-all duration-300 transform hover:scale-110 inline-block'>O</span>
+            <span className='hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block'>J</span>
+            <span className='hover:text-purple-400 transition-all duration-300 transform hover:scale-110 inline-block'>E</span>
+            <span className='hover:text-blue-400 transition-all duration-300 transform hover:scale-110 inline-block'>C</span>
+            <span className='hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block'>T</span>
+            <span className='hover:text-purple-400 transition-all duration-300 transform hover:rotate-45 inline-block'>{">"}</span>
+        </h1>
 
-        <div className="projectSlider" id='projectSlider'>
-          <div className="pro1 proSame">
-            {
-              projecData_?.map(val=>(
-                <Card3d data={val}/>
-              ))
-            }
-          </div>
-          <div className="pro2 proSame">
+        <div className='absolute sm:hidden left-[10%] -rotate-90 text-[10vh]'>
+          <span className="hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block">P</span>
+          <span className="hover:text-purple-400 transition-all duration-300 transform hover:scale-110 inline-block">R</span>
+          <span className="hover:text-blue-400 transition-all duration-300 transform hover:scale-110 inline-block">O</span>
+          <span className="hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block">J</span>
+          <span className="hover:text-purple-400 transition-all duration-300 transform hover:scale-110 inline-block">E</span>
+          <span className="hover:text-blue-400 transition-all duration-300 transform hover:scale-110 inline-block">C</span>
+          <span className="hover:text-pink-400 transition-all duration-300 transform hover:scale-110 inline-block">T</span>
+        </div>
 
-          </div>
-          <div className="pro3 proSame">
-
+        <div className={ `absolute sm:h-[85vh] overflow-hidden h-full w-full sm:w-[85vw] flex justify-start items-center p-[1px_0px] sm:p-[0px_0px] rounded-none sm:rounded-[50px] select-none transition-all duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] backdrop-blur-md bg-opacity-80 pointer-events-none scrollbar-hide transform sm:hover:scale-105 ${isProjectOpen ? `left-[0%] sm:left-[6%] pointer-events-auto w-[100vw] sm:w-[85vw] ` : 'left-[60%] h-[77vh] sm:h-[85vh] bg-white sm:bg-transparent rounded-[5%] sm:rounded-[0px]'}`} style={{boxShadow: '0 0 25px rgba(255,255,255,0.3), 0 0 50px rgba(255,255,255,0.2), 0 0 75px rgba(255,255,255,0.1)'}}>
+          <div id='projectSlider' className={`overflow-x-hidden relative min-w-full h-full bg-transparent  flex-wrap gap-[6%] z-[1] sm:min-w-full sm:rounded-[0%] sm:min-h-full sm:mr-[15px] sm:gap-[2%] sm:p-[2%] xs:flex-col ${!isProjectOpen ? '':'p-[2%] pointer-events-auto '}`} >
+            <ProjectAdv/>
           </div>
         </div>
-          <div onClick={scrollPro} className='btnProj'>{"<"}</div>
+
+        <button 
+          onClick={toggleProject}
+          className={`absolute z-20 w-12 h-[100px] flex justify-center items-center transition-all duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] text-[35px] rounded-[25px] font-bold transform sm:hover:scale-110 ${isProjectOpen ? 'left-[0%] sm:left-[6%] bg-gradient-to-br from-pink-500 scale-75 sm:scale-100 to-purple-500 text-white' : 'left-[60%] bg-gradient-to-br from-blue-400 to-purple-400'}`}
+          style={{boxShadow: '0 0 15px rgba(255,105,180,0.5), 0 0 30px rgba(75,0,130,0.3)'}}
+        >
+          {"<"}
+        </button>
       </div>
     </div>
   )

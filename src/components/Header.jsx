@@ -1,5 +1,5 @@
 import "./header.css";
-import LOGO from "../../public/imgs/LOGO.jpeg";
+import LOGO from "../../public/logo/chai.png"
 import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import profileApi from "../app/userSlice";
@@ -37,10 +37,11 @@ const Header = () => {
         const scrollYside = window.pageYOffset;
         if (scrollYside > topScroll) {
           header.style.top = "-100px";
+          document.querySelector(".navLinks").style.backgroundColor = "transparent";
         } else {
           header.style.top = "0px";
-          document.querySelector(".navLinks").style.backgroundColor = "black";
-          document.querySelector(".logo").style.backgroundColor = "black";
+          document.querySelector(".navLinks").style.backgroundColor = "rgba(17, 25, 40, 0.75)";
+          document.querySelector(".logo_name").style.color = "white";
         }
         topScroll = scrollYside;
       });
@@ -53,7 +54,7 @@ const Header = () => {
       <header>
         <div className="logo">
           <div className="logo_name">
-            <h4>{user.name}</h4>
+            <h4 className="text-cyan-400 font-poppins z-30">{user.name}</h4>
           </div>
           <img src={LOGO} />
         </div>

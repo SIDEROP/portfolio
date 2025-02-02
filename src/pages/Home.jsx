@@ -135,12 +135,12 @@ const Home = () => {
 
       <div id="con" className="content con">
         <div id="press">Press and hold</div>
-        <div className="prof_box">
-          <h1 className="akash">HI,I'M AKASH!</h1>
+        <div className="prof_box sm:text-3xl">
+          <h1 className="akash ">HI,I'M AKASH!</h1>
           <div className="next_">
             <h1 id="im">I'M</h1>
             <h1 id="status" className="status"></h1>
-            <span>|</span>
+            <span className="text-[16px] sm:text-[25px]">|</span>
           </div>
         </div>
 

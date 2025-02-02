@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import {Loader} from "./components/imports/imports";
 import { useSelector } from "react-redux";
+import ProjectAdv from "./pages/ProjectAdv";
 
 const App = () => {
     // api fetch 

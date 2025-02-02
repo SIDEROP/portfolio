@@ -66,8 +66,7 @@
 }
 
 .home .content .prof_box span{
-    font-size: 30px;
-    transform: translateY(2px);
+    transform: translateY(0px);
     color: aqua;
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.748),0 0 10px rgba(0, 255, 255, 0.748);
     
@@ -175,11 +174,6 @@
         font-size: 15px;
     }
 
-    .home .content .prof_box span{
-        font-size: 25px;
-        transform: translateY(2.4px);   
-    }
-
     .home .content .bioData p{
         font-size: 15px;
     }
@@ -188,11 +182,6 @@
 @media only screen and (max-width: 354px) {
     .home .content .prof_box{
         font-size: 11px;
-    }
-    
-    .home .content .prof_box span{
-        font-size: 18px;
-        transform: translateY(2px);   
     }
     
     .home .content .bioData p{
